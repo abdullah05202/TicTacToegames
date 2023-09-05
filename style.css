@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Baloo+Bhaina+2&family=Roboto:wght@400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    font-family: 'Roboto', sans-serif;
+    background: rgb(37,9,37);
+    color: white;
+    height: 55px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px
+}
+nav ul{
+    list-style: none;
+}
+
+
+.game-container{
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    position: relative;
+}
+
+
+.box{
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.box:hover{
+    background-color: rgb(219, 220, 240);
+}
+
+.info{
+    font-size: 22px;
+}
+
+.game-info{
+    padding: 0 34px ;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.game-info h1{
+    font-size: 2.5rem;
+}
+
+.img-box img{
+    /* display: none; */
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset{
+    margin: 0 23px;
+    padding: 1px  18px;
+    background-color: #e5c7e5;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-weight: bolder;
+}
+
+.line{
+    background-color: #911d91;
+    /* width: 20vw; */
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    transition: width 1s ease-in-out;
+    /* transform: translate(5vw, 15vw) rotate(90deg); */
+    transform-origin: center;
+}
+
+@media screen and (max-width: 900px)
+{
+    .game-container{
+        flex-wrap: wrap;
+    }
+    .game-info{
+        margin: 34px 27px;
+    }
+    .game-info h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+    .box{
+        font-size: 15vw;
+    }
+    
+}
+
+
